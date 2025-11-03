@@ -9,7 +9,7 @@ import GalleryPage from './components/GalleryPage';
 import Cart from './components/Cart';
 import Footer from './components/Footer';
 import Toast from './components/Toast';
-import ThemeDebug from './components/ThemeDebug';
+
 
 function App() {
   const [isCartOpen, setIsCartOpen] = useState(false);
@@ -70,8 +70,7 @@ function App() {
           
           <Footer />
           
-          {/* Temporary theme debug panel - remove after fixing */}
-          <ThemeDebug />
+         
         </div>
       </Router>
     </CartProvider>
