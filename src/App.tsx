@@ -5,9 +5,11 @@ import Loader from './components/Loader';
 import Header from './components/Header';
 import HomePage from './components/HomePage';
 import AboutPage from './components/AboutPage';
+import GalleryPage from './components/GalleryPage';
 import Cart from './components/Cart';
 import Footer from './components/Footer';
 import Toast from './components/Toast';
+import ThemeDebug from './components/ThemeDebug';
 
 function App() {
   const [isCartOpen, setIsCartOpen] = useState(false);
@@ -63,9 +65,13 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />
+            <Route path="/gallery" element={<GalleryPage />} />
           </Routes>
           
           <Footer />
+          
+          {/* Temporary theme debug panel - remove after fixing */}
+          <ThemeDebug />
         </div>
       </Router>
     </CartProvider>

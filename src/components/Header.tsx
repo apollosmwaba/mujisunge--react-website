@@ -11,38 +11,60 @@ const Header = ({ onCartClick }: HeaderProps) => {
   const navigate = useNavigate();
   const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  // Initialize dark mode state from localStorage immediately
+  // Initialize dark mode state from current DOM state
   const [isDarkMode, setIsDarkMode] = useState(() => {
     if (typeof window !== 'undefined') {
-      const savedTheme = localStorage.getItem('darkMode');
-      return savedTheme === 'true';
+      // Check the actual DOM state as source of truth
+      return document.documentElement.classList.contains('dark');
     }
     return false;
   });
   const { cartCount } = useCart();
 
   useEffect(() => {
-    // Ensure the HTML element has the correct dark class on mount
+    // Apply theme changes to HTML element
     const htmlElement = document.documentElement;
+    
+    // Remove all theme classes first to ensure clean state
+    htmlElement.classList.remove('dark');
+    
+    // Apply the appropriate theme
     if (isDarkMode) {
+      htmlElement.classList.add('dark');
+      localStorage.setItem('darkMode', 'true');
+    } else {
+      localStorage.setItem('darkMode', 'false');
+    }
+    
+    console.log('Theme applied:', isDarkMode ? 'Dark' : 'Light', 'Classes:', htmlElement.className);
+  }, [isDarkMode]);
+
+  const toggleDarkMode = () => {
+    const htmlElement = document.documentElement;
+    const currentlyDark = htmlElement.classList.contains('dark');
+    const newMode = !currentlyDark;
+    
+    // Force immediate DOM update
+    if (newMode) {
+      htmlElement.classList.remove('dark');
       htmlElement.classList.add('dark');
     } else {
       htmlElement.classList.remove('dark');
     }
-  }, [isDarkMode]);
-
-  const toggleDarkMode = () => {
-    const newMode = !isDarkMode;
+    
+    // Update state and localStorage
     setIsDarkMode(newMode);
-    // Save preference to localStorage
     localStorage.setItem('darkMode', newMode ? 'true' : 'false');
-    // The useEffect will handle updating the DOM class based on state change
+    
+    console.log('Theme toggled from', currentlyDark ? 'Dark' : 'Light', 'to', newMode ? 'Dark' : 'Light');
+    console.log('Final classes:', htmlElement.className);
   };
 
   const navLinks = [
     { href: '/', label: 'Home', isRoute: true },
     { href: '/about', label: 'About', isRoute: true },
     { href: '/#products', label: 'Products', isRoute: false },
+    { href: '/gallery', label: 'Gallery', isRoute: true },
     { href: '/#services', label: 'Services', isRoute: false },
     { href: '/#contact', label: 'Contact', isRoute: false },
   ];
@@ -98,10 +120,19 @@ const Header = ({ onCartClick }: HeaderProps) => {
           <div className="flex items-center gap-3 sm:gap-4">
             <button
               onClick={toggleDarkMode}
-              className="p-2 text-gray-800 dark:text-gray-200 hover:text-[#2e8b57] dark:hover:text-[#2e8b57] transition-colors duration-200 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700"
-              aria-label="Toggle dark mode"
+              className={`p-2 transition-all duration-200 rounded-lg ${
+                isDarkMode 
+                  ? 'text-yellow-400 hover:text-yellow-300 hover:bg-gray-700' 
+                  : 'text-gray-600 hover:text-[#2e8b57] hover:bg-gray-100'
+              }`}
+              aria-label={isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'}
+              title={isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'}
             >
-              {isDarkMode ? <Sun size={20} className="sm:w-6 sm:h-6" /> : <Moon size={20} className="sm:w-6 sm:h-6" />}
+              {isDarkMode ? (
+                <Sun size={20} className="sm:w-6 sm:h-6" />
+              ) : (
+                <Moon size={20} className="sm:w-6 sm:h-6" />
+              )}
             </button>
 
             <button

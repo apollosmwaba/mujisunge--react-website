@@ -6,17 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mujisunge Farm | Sustainable Agriculture Solutions</title>
     <script>
-      // Initialize dark mode based on saved preference
-      // This prevents flash of wrong theme
+      // Initialize theme before React loads to prevent flash
       (function() {
-        const savedTheme = localStorage.getItem('darkMode');
-        const htmlElement = document.documentElement;
-        
-        if (savedTheme === 'true') {
-          htmlElement.classList.add('dark');
-        } else {
-          // Explicitly remove dark class to ensure light mode
+        try {
+          const savedTheme = localStorage.getItem('darkMode');
+          const htmlElement = document.documentElement;
+          
+          // Clear any existing dark class first
           htmlElement.classList.remove('dark');
+          
+          // Apply dark mode only if explicitly set to true
+          if (savedTheme === 'true') {
+            htmlElement.classList.add('dark');
+          }
+        } catch (e) {
+          // If localStorage access fails, default to light mode
+          document.documentElement.classList.remove('dark');
         }
       })();
     </script>

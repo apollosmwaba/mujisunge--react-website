@@ -101,3 +101,34 @@ html {
 .animate-fade-in-up {
   animation: fade-in-up 0.8s ease-out forwards;
 }
+
+/* Gallery specific animations */
+@keyframes gallery-item-appear {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes lightbox-appear {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.gallery-item-animate {
+  animation: gallery-item-appear 0.6s ease-out forwards;
+}
+
+.lightbox-animate {
+  animation: lightbox-appear 0.3s ease-out forwards;
+}

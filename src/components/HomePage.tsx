@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import Hero from './Hero';
 import Products from './Products';
 import About from './About';
+import GalleryPreview from './GalleryPreview';
 import Services from './Services';
 import Contact from './Contact';
 import Map from './Map';
@@ -37,6 +38,9 @@ const HomePage = () => {
       </div>
       <div className="scroll-reveal">
         <About />
+      </div>
+      <div className="scroll-reveal">
+        <GalleryPreview />
       </div>
       <div className="scroll-reveal">
         <Services />
