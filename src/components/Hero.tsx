@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import image1 from '../assets/images/1.jpg';
 import image2 from '../assets/images/2.jpg';
 import image3 from '../assets/images/3.jpg';
+import heroImage from '../assets/images/0.png';
 
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -40,20 +41,35 @@ const Hero = () => {
 
       {/* Content */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="max-w-3xl animate-fade-in-up">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-4 sm:mb-6 leading-tight">
-            Sustainable Agriculture for a Healthier Future
-          </h1>
-          <p className="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 opacity-90 leading-relaxed">
-            Mujisunge Farm is dedicated to providing innovative, eco-friendly farming solutions that promote food security and environmental sustainability in Zambia and beyond.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-            <a href="#contact" className="btn text-center">
-              Contact Us
-            </a>
-            <a href="#products" className="btn btn-outline text-center">
-              Our Products
-            </a>
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[80vh]">
+          {/* Left Column - Text Content */}
+          <div className="animate-fade-in-up">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-4 sm:mb-6 leading-tight">
+              Welcome to Mujisunge Farms 
+            </h1>
+            <p className="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 opacity-90 leading-relaxed">
+              Mujisunge Farm is dedicated to providing innovative, eco-friendly farming solutions that promote food security and environmental sustainability in Zambia and beyond.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+              <a href="#contact" className="btn text-center">
+                Contact Us
+              </a>
+              <a href="#products" className="btn btn-outline text-center">
+                Our Products
+              </a>
+            </div>
+          </div>
+          
+          {/* Right Column - Hero Image */}
+          <div className="relative animate-fade-in-up animation-delay-300">
+            <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+              <img 
+                src={heroImage} 
+                alt="Mujisunge Farm - Sustainable Agriculture" 
+                className="w-full h-[400px] lg:h-[500px] object-cover transform hover:scale-105 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+            </div>
           </div>
         </div>
       </div>
