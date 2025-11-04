@@ -13,16 +13,16 @@ const About = () => {
         <div className="flex flex-col lg:flex-row items-center gap-8 sm:gap-10 lg:gap-12">
           <div className="flex-1 w-full">
             <h3 className="text-2xl sm:text-3xl font-bold text-[#1e5d3b] dark:text-[#2e8b57] mb-4 sm:mb-5">
-              Our Mission & Vision
+            Introduction  & Vision
             </h3>
             <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed text-sm sm:text-base">
-              Founded with a passion for sustainable agriculture, Mujisunge Farm is committed to revolutionizing farming practices in Zambia through innovative, environmentally conscious methods.
+              Mujisunge Farms is a leading agricultural enterprise dedicated to producing high-quality horticultural crops, cash crops, and livestock.
             </p>
             <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed text-sm sm:text-base">
-              We believe in the power of agriculture to transform communities, create economic opportunities, and protect our natural resources for future generations.
-            </p>
+               We are committed to sustainable farming practices that promote environmental stewardship and economic prosperity.      </p>
             <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed text-sm sm:text-base">
-              Our team of agricultural experts combines traditional knowledge with modern techniques to deliver solutions that are both effective and sustainable.
+              In addition to our agricultural production, we offer a range of agricultural services to support small-scale farmers and promote sustainable agriculture
+       
             </p>
             <button 
               onClick={() => navigate('/about')}

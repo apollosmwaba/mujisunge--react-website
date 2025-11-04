@@ -39,7 +39,7 @@ const Loader = () => {
         {/* Brand Name */}
         <div className="space-y-2">
           <h1 className="font-display text-4xl font-bold text-white tracking-wide animate-pulse">
-            Mujisunge Farm
+            Mujisunge Farms
           </h1>
           <p className="text-white/80 text-sm font-medium tracking-widest">
             SUSTAINABLE AGRICULTURE
