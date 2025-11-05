@@ -45,10 +45,10 @@ const Hero = () => {
           {/* Left Column - Text Content */}
           <div className="animate-fade-in-up">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-4 sm:mb-6 leading-tight">
-              Welcome to Mujisunge Farms 
+              Welcome To Mujisunge Farms 
             </h1>
             <p className="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 opacity-90 leading-relaxed">
-              Mujisunge Farm is dedicated to providing innovative, eco-friendly farming solutions that promote food security and environmental sustainability in Zambia and beyond.
+              Mujisunge Farms is a leading agricultural enterprise dedicated to producing high-quality horticultural crops, cash crops, and livestock. We are committed to sustainable farming practices that promote environmental stewardship and economic prosperity.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <a href="#contact" className="btn text-center">
@@ -65,7 +65,7 @@ const Hero = () => {
             <div className="relative overflow-hidden rounded-2xl shadow-2xl">
               <img 
                 src={heroImage} 
-                alt="Mujisunge Farm - Sustainable Agriculture" 
+                alt="Mujisunge Farms - Sustainable Agriculture" 
                 className="w-full h-[400px] lg:h-[500px] object-cover transform hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
