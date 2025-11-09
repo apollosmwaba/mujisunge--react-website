@@ -20,10 +20,10 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="pt-20 pb-12 sm:pt-24 sm:pb-16 md:pt-28 md:pb-20 bg-[#e8f5e9] dark:bg-gray-900 transition-colors duration-300">
+    <section id="services" className="py-12 sm:py-16 md:py-20 bg-[#e8f5e9] dark:bg-gray-900 transition-colors duration-300">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="section-title">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl">Our Services</h2>
+          <h2 className="text-3xl sm:text-4xl">Our Services</h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8 justify-items-center">

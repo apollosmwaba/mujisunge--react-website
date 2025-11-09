@@ -24,7 +24,7 @@ const Hero = () => {
   }, [slides.length]);
 
   return (
-    <section id="home" className="relative min-h-screen h-screen flex items-center text-white overflow-hidden">
+    <section id="home" className="relative min-h-screen flex items-center text-white overflow-hidden">
       {/* Slideshow */}
       <div className="absolute inset-0">
         {slides.map((slide, index) => (
@@ -42,28 +42,28 @@ const Hero = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-[#1e5d3b]/85 to-[#1e5d3b]/90" />
 
       {/* Content */}
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[80vh]">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-8 sm:py-12">
+        <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center min-h-[calc(100vh-8rem)] sm:min-h-[calc(100vh-6rem)]">
           {/* Left Column - Text Content */}
-          <div className="animate-fade-in-up">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-4 sm:mb-6 leading-tight">
+          <div className="animate-fade-in-up space-y-4 sm:space-y-6">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display font-bold leading-tight">
               Welcome To Mujisunge Farms 
             </h1>
-            <p className="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 opacity-90 leading-relaxed">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl opacity-90 leading-relaxed">
               Mujisunge Farms is a leading agricultural enterprise dedicated to producing high-quality horticultural crops, cash crops, and livestock. 
             </p>
 
-            <p className="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 opacity-90 leading-relaxed">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl opacity-90 leading-relaxed">
               We are committed to sustainable farming practices that promote environmental stewardship and economic prosperity.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-              <a href="#contact" className="btn text-center">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-4">
+              <a href="#contact" className="btn text-center text-sm sm:text-base px-6 py-3">
                 Contact Us
               </a>
               <button 
                 onClick={() => navigate('/products')}
-                className="btn btn-outline text-center"
+                className="btn btn-outline text-center text-sm sm:text-base px-6 py-3"
               >
                 Our Products
               </button>
@@ -71,12 +71,12 @@ const Hero = () => {
           </div>
           
           {/* Right Column - Hero Image */}
-          <div className="relative animate-fade-in-up animation-delay-300">
+          <div className="relative animate-fade-in-up animation-delay-300 mt-6 lg:mt-0">
             <div className="relative overflow-hidden rounded-2xl shadow-2xl">
               <img 
                 src={heroImage} 
                 alt="Mujisunge Farms - Sustainable Agriculture" 
-                className="w-full h-[400px] lg:h-[500px] object-cover transform hover:scale-105 transition-transform duration-700"
+                className="w-full h-[300px] sm:h-[400px] lg:h-[500px] object-cover transform hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
             </div>
