@@ -24,11 +24,11 @@
   }
 
   .section-title {
-    @apply text-center mb-12 relative;
+    @apply text-center mb-8 sm:mb-12 relative;
   }
 
   .section-title h2 {
-    @apply text-4xl text-[#1e5d3b] dark:text-[#2e8b57] inline-block;
+    @apply text-2xl sm:text-3xl md:text-4xl text-[#1e5d3b] dark:text-[#2e8b57] inline-block;
   }
 
   .section-title h2::after {
