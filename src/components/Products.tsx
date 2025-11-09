@@ -17,9 +17,9 @@ const Products = () => {
           <div className="space-y-6">
             <div className="space-y-4">
               <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-                Discover our comprehensive range of premium agricultural products designed to transform your farming experience. 
-                From high-quality seeds and fertilizers to advanced irrigation systems and eco-friendly solutions, we provide 
-                everything you need for sustainable and profitable agriculture.
+                At Mujisunge Farms, we believe that sustainable agriculture is essential for ensuring food security, 
+                protecting the environment, and improving the livelihoods of rural communities. 
+                We are dedicated to working to create a more sustainable and resilient agricultural sector.
               </p>
               
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-6">

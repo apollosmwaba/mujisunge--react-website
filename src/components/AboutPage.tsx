@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { ArrowLeft, Users, Target, Lightbulb, Award, Leaf, TrendingUp, Heart, CheckCircle } from 'lucide-react';
+import { ArrowLeft, Users, Target, Lightbulb, Award, Leaf, TrendingUp, Heart, CheckCircle, FlaskConical, Wheat, Recycle, Search } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import image2 from '../assets/images/2.jpg';
 
@@ -209,6 +209,100 @@ const AboutPage = () => {
                   </div>
                 </div>
               ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Research and Development Section */}
+      <section className="py-20 bg-[#2c3e50] dark:bg-[#1a252f]">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12 scroll-reveal opacity-0">
+              <div className="flex items-center justify-center gap-3 mb-6">
+                <FlaskConical className="w-12 h-12 text-[#2e8b57]" />
+                <h2 className="text-4xl md:text-5xl font-bold text-white">
+                  Research and <span className="text-red-500">Development</span>
+                </h2>
+              </div>
+            </div>
+            
+            <div className="bg-[#34495e] dark:bg-[#2c3e50] rounded-2xl p-8 md:p-12 shadow-xl scroll-reveal opacity-0 border border-gray-600/30">
+              <p className="text-lg md:text-xl text-gray-200 leading-relaxed text-justify">
+                Mujisunge Farms is exploring various research and development opportunities to enhance its operations and stay competitive in the agricultural sector. These opportunities include adopting agricultural technologies like precision agriculture, automation, and data analytics, developing strategies to adapt to climate change, implementing sustainable farming practices, creating value-added products, and conducting market research. By investing in R&D, Mujisunge Farms seeks to stay at the forefront of agricultural innovation, improve its competitiveness, and contribute to sustainable and resilient agriculture.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Future Plans and Goals Section */}
+      <section className="py-20 bg-[#2c3e50] dark:bg-[#1a252f] relative overflow-hidden">
+        {/* Background decorative elements */}
+        <div className="absolute top-10 right-10 w-32 h-32 bg-[#2e8b57]/10 rounded-full opacity-50"></div>
+        <div className="absolute bottom-10 left-10 w-24 h-24 bg-red-500/10 rounded-full opacity-50"></div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16 scroll-reveal opacity-0">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Future Plans
+              </h2>
+              <h3 className="text-3xl md:text-4xl font-bold text-red-500 mb-8">
+                and Goals
+              </h3>
+              <p className="text-lg md:text-xl text-gray-200 leading-relaxed max-w-4xl mx-auto">
+                Mujisunge farms hopes to engage in various activities in future like sustainable projects for rural communities in Chongwe, climate education for schools, local fruit plantation production and highly efficient organic production classes all by 2030.
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
+              {/* Organic Product Line */}
+              <div className="scroll-reveal opacity-0 transition-all duration-700 delay-100">
+                <div className="bg-[#2e8b57] hover:bg-[#228b22] rounded-3xl p-8 text-center text-white shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-2 group">
+                  <div className="bg-red-500 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <Wheat className="w-10 h-10 text-white" />
+                  </div>
+                  <h4 className="text-xl font-bold mb-4">Organic Product Line</h4>
+                  <p className="text-green-100 leading-relaxed">
+                    Developing a comprehensive range of certified organic products to meet growing market demand for sustainable agriculture.
+                  </p>
+                </div>
+              </div>
+
+              {/* Eco-Friendly Farming Solutions */}
+              <div className="scroll-reveal opacity-0 transition-all duration-700 delay-200">
+                <div className="bg-[#2e8b57] hover:bg-[#228b22] rounded-3xl p-8 text-center text-white shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-2 group">
+                  <div className="bg-red-500 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <Recycle className="w-10 h-10 text-white" />
+                  </div>
+                  <h4 className="text-xl font-bold mb-4">Eco-Friendly Farming Solutions</h4>
+                  <p className="text-green-100 leading-relaxed">
+                    Implementing innovative sustainable farming techniques that protect the environment while maximizing productivity.
+                  </p>
+                </div>
+              </div>
+
+              {/* Local Fruit Production Research */}
+              <div className="scroll-reveal opacity-0 transition-all duration-700 delay-300">
+                <div className="bg-[#2e8b57] hover:bg-[#228b22] rounded-3xl p-8 text-center text-white shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-2 group">
+                  <div className="bg-red-500 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <Search className="w-10 h-10 text-white" />
+                  </div>
+                  <h4 className="text-xl font-bold mb-4">Engage in Local Fruit Production Research</h4>
+                  <p className="text-green-100 leading-relaxed">
+                    Conducting research to optimize local fruit varieties and develop climate-resilient cultivation methods.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Timeline indicator */}
+            <div className="text-center mt-16 scroll-reveal opacity-0">
+              <div className="inline-flex items-center gap-4 bg-gradient-to-r from-red-500 to-red-600 text-white px-8 py-4 rounded-full shadow-lg">
+                <Target className="w-6 h-6" />
+                <span className="text-lg font-semibold">Target Year: 2030</span>
+              </div>
             </div>
           </div>
         </div>

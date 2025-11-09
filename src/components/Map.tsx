@@ -17,6 +17,27 @@ const Map = () => {
             title="Mujisunge Farm Location"
           />
         </div>
+
+        {/* Market Segments Section */}
+        <div className="mt-12 bg-white dark:bg-gray-800 rounded-lg p-8 shadow-lg">
+          <div className="text-center mb-8">
+            <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-lg">
+              Mujisunge Farms targets several distinct market segments in Chongwe and Lusaka, including small-scale farmers, agribusinesses, government agencies and NGOs, consumers, and educational institutions. By tailoring its products and services to meet the specific needs of each group, we seek to increase our market reach and profitability.
+            </p>
+          </div>
+
+          {/* Location Markers */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex items-center gap-3 bg-green-600 text-white px-6 py-3 rounded-full shadow-md hover:bg-red-700 transition-colors duration-300">
+              <div className="w-3 h-3 bg-white rounded-full"></div>
+              <span className="font-semibold text-lg">Chongwe</span>
+            </div>
+            <div className="flex items-center gap-3 bg-green-600 text-white px-6 py-3 rounded-full shadow-md hover:bg-red-700 transition-colors duration-300">
+              <div className="w-3 h-3 bg-white rounded-full"></div>
+              <span className="font-semibold text-lg">Lusaka</span>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

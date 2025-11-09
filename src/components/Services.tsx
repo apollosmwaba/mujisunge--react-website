@@ -1,27 +1,23 @@
-import { Sprout, Tractor, Droplets, Leaf } from 'lucide-react';
+import { Sprout, Users, GraduationCap, Leaf } from 'lucide-react';
 
 const Services = () => {
   const services = [
     {
       icon: <Sprout size={40} />,
-      title: "Organic Farming",
-      description: "Specializing in chemical-free cultivation methods that produce healthier crops while preserving soil fertility and biodiversity."
+      title: "Agricultural Production",
+      description: "We specialize in producing high-quality horticultural crops, cash crops, and livestock. Our commitment to sustainable farming practices promotes environmental stewardship while ensuring economic prosperity for our community."
     },
     {
-      icon: <Tractor size={40} />,
-      title: "Modern Equipment",
-      description: "Access to state-of-the-art farming machinery and technology for efficient land preparation, planting, and harvesting."
+      icon: <Users size={40} />,
+      title: "Agricultural Consulting Services",
+      description: "Mujisunge Farms offers comprehensive agricultural support, including expert consultation on crop selection, soil management, pest and disease control, and other essential practices. We provide valuable information on agricultural trends, market opportunities, and best practices to help farmers optimize their operations and stay ahead of the curve."
     },
     {
-      icon: <Droplets size={40} />,
-      title: "Irrigation Solutions",
-      description: "Implementing water-efficient irrigation systems that maximize crop yield while conserving precious water resources."
+      icon: <GraduationCap size={40} />,
+      title: "Climate Change Education",
+      description: "We raise awareness about the impacts of climate change on agriculture and offer practical solutions to mitigate its challenges. Our educational programs empower farmers with knowledge and tools for climate-resilient farming."
     },
-    {
-      icon: <Leaf size={40} />,
-      title: "Sustainable Practices",
-      description: "Training and consulting on eco-friendly farming techniques that protect the environment and ensure long-term productivity."
-    }
+   
   ];
 
   return (
@@ -31,19 +27,19 @@ const Services = () => {
           <h2 className="text-3xl sm:text-4xl">Our Services</h2>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8 justify-items-center">
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-white dark:bg-gray-800 rounded-lg p-6 sm:p-8 text-center shadow-lg hover:-translate-y-2 hover:shadow-2xl transition-all duration-300"
+              className="bg-white dark:bg-gray-800 rounded-lg p-6 lg:p-8 text-center shadow-lg hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 w-full max-w-sm"
             >
-              <div className="w-16 h-16 sm:w-20 sm:h-20 bg-[#e8f5e9] dark:bg-gray-700 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-5 text-[#2e8b57]">
+              <div className="w-16 h-16 lg:w-20 lg:h-20 bg-[#e8f5e9] dark:bg-gray-700 rounded-full flex items-center justify-center mx-auto mb-5 lg:mb-6 text-[#2e8b57]">
                 {service.icon}
               </div>
-              <h3 className="text-lg sm:text-xl font-bold text-[#1e5d3b] dark:text-[#2e8b57] mb-3 sm:mb-4">
+              <h3 className="text-lg lg:text-xl font-bold text-[#1e5d3b] dark:text-[#2e8b57] mb-4 lg:mb-5">
                 {service.title}
               </h3>
-              <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-sm sm:text-base">
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-sm lg:text-base">
                 {service.description}
               </p>
             </div>
