@@ -1,4 +1,4 @@
-import { ArrowRight, Leaf, Sprout, Tractor } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import image2 from '../assets/images/2.jpg';
 
