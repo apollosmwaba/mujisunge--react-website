@@ -1,7 +1,8 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { Menu, X, ShoppingCart, Moon, Sun } from 'lucide-react';
 import { useCart } from '../context/CartContext';
+import { useTheme } from '../hooks/useTheme';
 import logo from '../assets/images/LOGO.jpg';
 
 interface HeaderProps {
@@ -12,54 +13,8 @@ const Header = ({ onCartClick }: HeaderProps) => {
   const navigate = useNavigate();
   const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  // Initialize dark mode state from current DOM state
-  const [isDarkMode, setIsDarkMode] = useState(() => {
-    if (typeof window !== 'undefined') {
-      // Check the actual DOM state as source of truth
-      return document.documentElement.classList.contains('dark');
-    }
-    return false;
-  });
   const { cartCount } = useCart();
-
-  useEffect(() => {
-    // Apply theme changes to HTML element
-    const htmlElement = document.documentElement;
-    
-    // Remove all theme classes first to ensure clean state
-    htmlElement.classList.remove('dark');
-    
-    // Apply the appropriate theme
-    if (isDarkMode) {
-      htmlElement.classList.add('dark');
-      localStorage.setItem('darkMode', 'true');
-    } else {
-      localStorage.setItem('darkMode', 'false');
-    }
-    
-    console.log('Theme applied:', isDarkMode ? 'Dark' : 'Light', 'Classes:', htmlElement.className);
-  }, [isDarkMode]);
-
-  const toggleDarkMode = () => {
-    const htmlElement = document.documentElement;
-    const currentlyDark = htmlElement.classList.contains('dark');
-    const newMode = !currentlyDark;
-    
-    // Force immediate DOM update
-    if (newMode) {
-      htmlElement.classList.remove('dark');
-      htmlElement.classList.add('dark');
-    } else {
-      htmlElement.classList.remove('dark');
-    }
-    
-    // Update state and localStorage
-    setIsDarkMode(newMode);
-    localStorage.setItem('darkMode', newMode ? 'true' : 'false');
-    
-    console.log('Theme toggled from', currentlyDark ? 'Dark' : 'Light', 'to', newMode ? 'Dark' : 'Light');
-    console.log('Final classes:', htmlElement.className);
-  };
+  const { isDarkMode, toggleTheme } = useTheme();
 
   const navLinks = [
     { href: '/', label: 'Home', isRoute: true },
@@ -127,7 +82,7 @@ const Header = ({ onCartClick }: HeaderProps) => {
           {/* Actions */}
           <div className="flex items-center gap-3 sm:gap-4">
             <button
-              onClick={toggleDarkMode}
+              onClick={toggleTheme}
               className={`p-2 transition-all duration-200 rounded-lg animate-fade-in animation-delay-900 ${
                 isDarkMode 
                   ? 'text-yellow-400 hover:text-yellow-300 hover:bg-gray-700' 

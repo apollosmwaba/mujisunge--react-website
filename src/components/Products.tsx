@@ -22,7 +22,7 @@ const Products = () => {
                 We are dedicated to working to create a more sustainable and resilient agricultural sector.
               </p>
               
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-6">
+              {/* <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-6">
                 <div className="flex items-center gap-3 p-3 bg-white dark:bg-gray-800 rounded-lg shadow-sm">
                   <div className="p-2 bg-green-100 dark:bg-green-900 rounded-full">
                     <Sprout className="w-5 h-5 text-green-600 dark:text-green-400" />
@@ -52,7 +52,7 @@ const Products = () => {
                     <p className="text-xs text-gray-600 dark:text-gray-400">Modern tools</p>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
 
             <button

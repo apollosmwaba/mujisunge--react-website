@@ -63,7 +63,10 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-lg mb-1">Location</h4>
-                  <p className="text-gray-600 dark:text-gray-400">Lusaka, Zambia</p>
+                  <p className="text-gray-600 dark:text-gray-400">
+                    25a Munali Road, Kwamwena Valley<br />
+                    Kapwayambale, Lusaka, Zambia
+                  </p>
                 </div>
               </div>
             </div>
@@ -73,10 +76,10 @@ const Contact = () => {
             </h3>
             <div className="flex gap-4">
               {[
-                { icon: <Facebook size={20} />, href: '#' },
-                { icon: <Twitter size={20} />, href: '#' },
+                { icon: <Facebook size={20} />, href: 'https://www.facebook.com/people/Mujisunge-Farms/100094436227528/' },
+                // { icon: <Twitter size={20} />, href: '#' },
                 { icon: <Instagram size={20} />, href: '#' },
-                { icon: <Linkedin size={20} />, href: '#' }
+                // { icon: <Linkedin size={20} />, href: '#' }
               ].map((social, index) => (
                 <a
                   key={index}
