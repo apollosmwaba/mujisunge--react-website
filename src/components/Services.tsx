@@ -1,5 +1,4 @@
-import { Sprout, Users, GraduationCap, Leaf } from 'lucide-react';
-
+import { Sprout, Users, GraduationCap } from 'lucide-react';
 const Services = () => {
   const services = [
     {

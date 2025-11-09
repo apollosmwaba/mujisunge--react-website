@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import { Mail, Phone, MapPin, Facebook, Instagram } from 'lucide-react';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -77,9 +77,7 @@ const Contact = () => {
             <div className="flex gap-4">
               {[
                 { icon: <Facebook size={20} />, href: 'https://www.facebook.com/people/Mujisunge-Farms/100094436227528/' },
-                // { icon: <Twitter size={20} />, href: '#' },
                 { icon: <Instagram size={20} />, href: '#' },
-                // { icon: <Linkedin size={20} />, href: '#' }
               ].map((social, index) => (
                 <a
                   key={index}
