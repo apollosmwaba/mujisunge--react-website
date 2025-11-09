@@ -1,67 +1,9 @@
-import { ShoppingCart } from 'lucide-react';
-import { useCart } from '../context/CartContext';
-import type { Product } from '../types';
-import image1 from '../assets/images/1.jpg';
+import { ArrowRight, Leaf, Sprout, Tractor } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import image2 from '../assets/images/2.jpg';
-import image3 from '../assets/images/3.jpg';
-
-const products: Product[] = [
-  {
-    id: 1,
-    name: "Organic Maize Seeds",
-    price: 25.99,
-    description: "High-yield, non-GMO maize seeds suitable for Zambian climate",
-    image: image1
-  },
-  {
-    id: 2,
-    name: "Premium Fertilizer",
-    price: 45.50,
-    description: "Balanced NPK fertilizer for all crop types",
-    image: image2
-  },
-  {
-    id: 3,
-    name: "Irrigation Drip Kit",
-    price: 120.00,
-    description: "Complete drip irrigation system for 0.5 acre farm",
-    image: image3
-  },
-  {
-    id: 4,
-    name: "Organic Pesticides",
-    price: 35.75,
-    description: "Eco-friendly pest control solution for vegetables",
-    image: image1
-  },
-  {
-    id: 5,
-    name: "Farm Tools Set",
-    price: 85.00,
-    description: "Complete set of essential farming tools",
-    image: image2
-  },
-  {
-    id: 6,
-    name: "Greenhouse Kit",
-    price: 350.00,
-    description: "DIY greenhouse kit for small-scale farming",
-    image: image3
-  }
-];
 
 const Products = () => {
-  const { addToCart } = useCart();
-
-  const handleAddToCart = (product: Product) => {
-    addToCart(product);
-    
-    // Dispatch custom event for toast notification
-    const event = new CustomEvent('cart-add', {
-      detail: { message: `${product.name} added to cart!` }
-    });
-    window.dispatchEvent(event);
-  };
+  const navigate = useNavigate();
 
   return (
     <section id="products" className="py-12 sm:py-16 md:py-20 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
@@ -70,39 +12,77 @@ const Products = () => {
           <h2 className="text-3xl sm:text-4xl">Our Products</h2>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-          {products.map((product) => (
-            <div
-              key={product.id}
-              className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:-translate-y-2 hover:shadow-2xl transition-all duration-300"
-            >
-              <div className="h-48 sm:h-52 overflow-hidden">
-                <img
-                  src={product.image}
-                  alt={product.name}
-                  className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
-                />
-              </div>
-              <div className="p-4 sm:p-5">
-                <h3 className="text-lg sm:text-xl font-bold text-[#1e5d3b] dark:text-[#2e8b57] mb-2">
-                  {product.name}
-                </h3>
-                <p className="text-gray-600 dark:text-gray-400 text-sm mb-3 line-clamp-2">
-                  {product.description}
-                </p>
-                <div className="text-xl sm:text-2xl font-bold text-[#2e8b57] mb-4">
-                  K{product.price.toFixed(2)}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          {/* Left Column - Content */}
+          <div className="space-y-6">
+            <div className="space-y-4">
+              <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+                Discover our comprehensive range of premium agricultural products designed to transform your farming experience. 
+                From high-quality seeds and fertilizers to advanced irrigation systems and eco-friendly solutions, we provide 
+                everything you need for sustainable and profitable agriculture.
+              </p>
+              
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-6">
+                <div className="flex items-center gap-3 p-3 bg-white dark:bg-gray-800 rounded-lg shadow-sm">
+                  <div className="p-2 bg-green-100 dark:bg-green-900 rounded-full">
+                    <Sprout className="w-5 h-5 text-green-600 dark:text-green-400" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-sm text-gray-800 dark:text-gray-200">Seeds & Plants</h4>
+                    <p className="text-xs text-gray-600 dark:text-gray-400">Premium varieties</p>
+                  </div>
                 </div>
-                <button
-                  onClick={() => handleAddToCart(product)}
-                  className="w-full flex items-center justify-center gap-2 bg-[#2e8b57] text-white py-2 px-4 rounded font-semibold hover:bg-[#1e5d3b] transition-colors duration-200"
-                >
-                  <ShoppingCart size={18} />
-                  Add to Cart
-                </button>
+                
+                <div className="flex items-center gap-3 p-3 bg-white dark:bg-gray-800 rounded-lg shadow-sm">
+                  <div className="p-2 bg-blue-100 dark:bg-blue-900 rounded-full">
+                    <Leaf className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-sm text-gray-800 dark:text-gray-200">Fertilizers</h4>
+                    <p className="text-xs text-gray-600 dark:text-gray-400">Organic solutions</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-center gap-3 p-3 bg-white dark:bg-gray-800 rounded-lg shadow-sm">
+                  <div className="p-2 bg-orange-100 dark:bg-orange-900 rounded-full">
+                    <Tractor className="w-5 h-5 text-orange-600 dark:text-orange-400" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-sm text-gray-800 dark:text-gray-200">Equipment</h4>
+                    <p className="text-xs text-gray-600 dark:text-gray-400">Modern tools</p>
+                  </div>
+                </div>
               </div>
             </div>
-          ))}
+
+            <button
+              onClick={() => navigate('/products')}
+              className="inline-flex items-center gap-3 bg-[#2e8b57] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#1e5d3b] transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+            >
+              <span>Explore All Products</span>
+              <ArrowRight className="w-5 h-5" />
+            </button>
+          </div>
+
+          {/* Right Column - Creative Image Layout */}
+          <div className="relative">
+            <div className="relative overflow-hidden rounded-2xl shadow-2xl transform rotate-2 hover:rotate-0 transition-transform duration-500">
+              <img
+                src={image2}
+                alt="Agricultural Products"
+                className="w-full h-80 lg:h-96 object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+              <div className="absolute bottom-6 left-6 right-6">
+                <h3 className="text-white text-xl font-bold mb-2">Quality Products for Modern Farming</h3>
+                <p className="text-white/90 text-sm">Sustainable solutions for every agricultural need</p>
+              </div>
+            </div>
+            
+            {/* Decorative Elements */}
+            <div className="absolute -top-4 -right-4 w-20 h-20 bg-[#2e8b57] rounded-full opacity-20 animate-pulse"></div>
+            <div className="absolute -bottom-6 -left-6 w-16 h-16 bg-[#1e5d3b] rounded-full opacity-30 animate-pulse animation-delay-1000"></div>
+          </div>
         </div>
       </div>
     </section>

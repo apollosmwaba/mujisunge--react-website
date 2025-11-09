@@ -12,17 +12,13 @@ const Header = ({ onCartClick }: HeaderProps) => {
   const navigate = useNavigate();
   const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  // Initialize dark mode state from localStorage or default to light mode
+  // Initialize dark mode state from current DOM state
   const [isDarkMode, setIsDarkMode] = useState(() => {
     if (typeof window !== 'undefined') {
-      // Check localStorage first, then DOM state, default to light mode
-      const savedTheme = localStorage.getItem('darkMode');
-      if (savedTheme !== null) {
-        return savedTheme === 'true';
-      }
+      // Check the actual DOM state as source of truth
       return document.documentElement.classList.contains('dark');
     }
-    return false; // Default to light mode
+    return false;
   });
   const { cartCount } = useCart();
 
@@ -68,7 +64,7 @@ const Header = ({ onCartClick }: HeaderProps) => {
   const navLinks = [
     { href: '/', label: 'Home', isRoute: true },
     { href: '/about', label: 'About', isRoute: true },
-    { href: '/#products', label: 'Products', isRoute: false },
+    { href: '/products', label: 'Products', isRoute: true },
     { href: '/gallery', label: 'Gallery', isRoute: true },
     { href: '/#services', label: 'Services', isRoute: false },
     { href: '/#contact', label: 'Contact', isRoute: false },

@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import image1 from '../assets/images/1.jpg';
 import image2 from '../assets/images/2.jpg';
 import image3 from '../assets/images/3.jpg';
@@ -6,6 +7,7 @@ import heroImage from '../assets/images/0.png';
 
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const navigate = useNavigate();
 
   const slides = [
     image1,
@@ -48,15 +50,23 @@ const Hero = () => {
               Welcome To Mujisunge Farms 
             </h1>
             <p className="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 opacity-90 leading-relaxed">
-              Mujisunge Farms is a leading agricultural enterprise dedicated to producing high-quality horticultural crops, cash crops, and livestock. We are committed to sustainable farming practices that promote environmental stewardship and economic prosperity.
+              Mujisunge Farms is a leading agricultural enterprise dedicated to producing high-quality horticultural crops, cash crops, and livestock. 
             </p>
+
+            <p className="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 opacity-90 leading-relaxed">
+              We are committed to sustainable farming practices that promote environmental stewardship and economic prosperity.
+            </p>
+            
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <a href="#contact" className="btn text-center">
                 Contact Us
               </a>
-              <a href="#products" className="btn btn-outline text-center">
+              <button 
+                onClick={() => navigate('/products')}
+                className="btn btn-outline text-center"
+              >
                 Our Products
-              </a>
+              </button>
             </div>
           </div>
           

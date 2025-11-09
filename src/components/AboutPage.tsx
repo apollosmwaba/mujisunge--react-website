@@ -232,7 +232,7 @@ const AboutPage = () => {
                 Get In Touch
               </button>
               <button
-                onClick={() => navigate('/#products')}
+                onClick={() => navigate('/products')}
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-green-700 transition-colors transform hover:scale-105 duration-200"
               >
                 View Our Products
