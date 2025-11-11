@@ -8,7 +8,7 @@ import image4 from '../assets/images/4.jpg';
 import image5 from '../assets/images/FG3.JPG';
 import image6 from '../assets/images/h3.JPG';
 import image7 from '../assets/images/5.JPG';
-import image8 from '../assets/images/2.JPG';
+import image8 from '../assets/images/h2.JPG';
 
 interface GalleryImage {
   id: number;
