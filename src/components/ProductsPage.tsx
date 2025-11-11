@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { ShoppingCart } from 'lucide-react';
 import { useCart } from '../context/CartContext';
 import type { Product } from '../types';
@@ -50,6 +51,13 @@ const products: Product[] = [
 
 const ProductsPage = () => {
   const { addToCart } = useCart();
+
+  useEffect(() => {
+    // Ensure page starts from top
+    window.scrollTo(0, 0);
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+  }, []);
 
   const handleAddToCart = (product: Product) => {
     addToCart(product);

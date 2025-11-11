@@ -10,6 +10,7 @@ import ProductsPage from './components/ProductsPage';
 import Cart from './components/Cart';
 import Footer from './components/Footer';
 import Toast from './components/Toast';
+import ScrollToTop from './components/ScrollToTop';
 
 
 function App() {
@@ -51,6 +52,7 @@ function App() {
   return (
     <CartProvider>
       <Router>
+        <ScrollToTop />
         <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
           <Loader />
           <Header onCartClick={() => setIsCartOpen(true)} />

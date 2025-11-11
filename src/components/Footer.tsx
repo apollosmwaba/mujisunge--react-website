@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -63,12 +64,12 @@ const Footer = () => {
                 // { name: 'Contact', href: '/#contact' }
               ].map((link) => (
                 <li key={link.name}>
-                  <a
-                    href={link.href}
+                  <Link
+                    to={link.href}
                     className="text-gray-400 hover:text-white transition-colors text-sm"
                   >
                     {link.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -97,12 +98,12 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a
-                  href="/gallery"
+                <Link
+                  to="/gallery"
                   className="text-gray-400 hover:text-white transition-colors text-sm"
                 >
                   Farm Tours
-                </a>
+                </Link>
               </li>
               <li>
                 <a

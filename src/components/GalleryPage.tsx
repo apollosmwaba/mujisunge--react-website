@@ -83,6 +83,11 @@ const GalleryPage = () => {
   ];
 
   useEffect(() => {
+    // Ensure page starts from top
+    window.scrollTo(0, 0);
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+    
     // Simulate loading time for images
     const timer = setTimeout(() => {
       setIsLoading(false);

@@ -8,6 +8,11 @@ const AboutPage = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+    // Ensure page starts from top
+    window.scrollTo(0, 0);
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+    
     setIsVisible(true);
     
     // Scroll reveal animation

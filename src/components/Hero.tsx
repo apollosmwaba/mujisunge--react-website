@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import image1 from '../assets/images/1.jpg';
-import image2 from '../assets/images/2.jpg';
+import image2 from '../assets/images/h3.JPG';
 import image3 from '../assets/images/3.jpg';
 // import heroImage from '../assets/images/0.png';
 
@@ -58,9 +58,15 @@ const Hero = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-4">
-              <a href="#contact" className="btn text-center text-sm sm:text-base px-6 py-3">
+              <button 
+                onClick={() => {
+                  const contactSection = document.querySelector('#contact');
+                  contactSection?.scrollIntoView({ behavior: 'smooth' });
+                }}
+                className="btn text-center text-sm sm:text-base px-6 py-3"
+              >
                 Contact Us
-              </a>
+              </button>
               <button 
                 onClick={() => navigate('/products')}
                 className="btn btn-outline text-center text-sm sm:text-base px-6 py-3"
