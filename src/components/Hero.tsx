@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import image1 from '../assets/images/1.jpg';
 import image2 from '../assets/images/2.jpg';
 import image3 from '../assets/images/3.jpg';
-import heroImage from '../assets/images/0.png';
+// import heroImage from '../assets/images/0.png';
 
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -47,7 +47,7 @@ const Hero = () => {
           {/* Left Column - Text Content */}
           <div className="animate-fade-in-up space-y-4 sm:space-y-6">
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display font-bold leading-tight">
-              Welcome To Mujisunge Farms 
+              Welcome To Mujisunge Farms
             </h1>
             <p className="text-sm sm:text-base md:text-lg lg:text-xl opacity-90 leading-relaxed">
               Mujisunge Farms is a leading agricultural enterprise dedicated to producing high-quality horticultural crops, cash crops, and livestock. 
@@ -73,11 +73,11 @@ const Hero = () => {
           {/* Right Column - Hero Image */}
           <div className="relative animate-fade-in-up animation-delay-300 mt-6 lg:mt-0">
             <div className="relative overflow-hidden rounded-2xl shadow-2xl">
-              <img 
+              {/* <img 
                 src={heroImage} 
                 alt="Mujisunge Farms - Sustainable Agriculture" 
                 className="w-full h-[300px] sm:h-[400px] lg:h-[500px] object-cover transform hover:scale-105 transition-transform duration-700"
-              />
+              /> */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
             </div>
           </div>

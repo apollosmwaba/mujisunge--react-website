@@ -1,10 +1,14 @@
 import { useState, useEffect } from 'react';
 import { ArrowLeft, X, ChevronLeft, ChevronRight, ZoomIn } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-import image1 from '../assets/images/1.jpg';
-import image2 from '../assets/images/2.jpg';
+import image1 from '../assets/images/fg2.JPG';
+import image2 from '../assets/images/fg4.JPG';
 import image3 from '../assets/images/3.jpg';
 import image4 from '../assets/images/4.jpg';
+import image5 from '../assets/images/FG3.JPG';
+import image6 from '../assets/images/h3.JPG';
+import image7 from '../assets/images/5.jpg';
+import image8 from '../assets/images/2.JPG';
 
 interface GalleryImage {
   id: number;
@@ -50,28 +54,28 @@ const GalleryPage = () => {
     },
     {
       id: 5,
-      src: image1,
+      src: image8,
       alt: "Organic Vegetables",
       title: "Fresh Organic Produce",
       description: "Freshly harvested organic vegetables grown with care and dedication."
     },
     {
       id: 6,
-      src: image2,
+      src: image5,
       alt: "Farm Workers",
       title: "Dedicated Team",
       description: "Our skilled team of agricultural experts working together for sustainable farming."
     },
     {
       id: 7,
-      src: image3,
+      src: image6,
       alt: "Irrigation Systems",
       title: "Smart Irrigation",
       description: "Advanced irrigation systems ensuring optimal water usage and crop health."
     },
     {
       id: 8,
-      src: image4,
+      src: image7,
       alt: "Farm Equipment",
       title: "Modern Equipment",
       description: "State-of-the-art farming equipment for efficient and sustainable operations."

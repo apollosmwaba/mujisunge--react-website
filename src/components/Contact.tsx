@@ -1,6 +1,5 @@
 import { useState } from 'react';
-import { Mail, Phone, MapPin, Facebook, Instagram } from 'lucide-react';
-
+import { Mail, Phone, MapPin, Facebook, Instagram, Linkedin } from 'lucide-react';
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -76,13 +75,21 @@ const Contact = () => {
             </h3>
             <div className="flex gap-4">
               {[
-                { icon: <Facebook size={20} />, href: 'https://www.facebook.com/people/Mujisunge-Farms/100094436227528/' },
-                { icon: <Instagram size={20} />, href: '#' },
+                { icon: <Facebook size={20} />, href: 'https://www.facebook.com/share/16hynyNBHG/?mibextid=wwXIfr' },
+                { icon: <Instagram size={20} />, href: 'https://www.instagram.com/mujisunge_farms?igsh=MTVjNXR3bDJjNWFqbw==' },
+                { icon: <Linkedin size={20} />, href: 'https://www.linkedin.com/company/mujisunge-farms/' },
+                { icon: (
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-4.59v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 1.9 14.4a6.34 6.34 0 0 0 10.86 4.43v-.05a6.29 6.29 0 0 0 1.88-4.44V8.84a8.16 8.16 0 0 0 4.77 1.52v-3.24a4.85 4.85 0 0 1-.82-.43z"/>
+                  </svg>
+                ), href: 'https://www.tiktok.com/@mujisungefarms?_r=1&_t=ZM-91HHDPIjDUx' },
               ].map((social, index) => (
                 <a
                   key={index}
                   href={social.href}
                   className="w-10 h-10 sm:w-11 sm:h-11 bg-[#2e8b57] rounded-full flex items-center justify-center text-white hover:bg-[#1e5d3b] hover:-translate-y-1 transition-all duration-200"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label="Social media link"
                 >
                   {social.icon}

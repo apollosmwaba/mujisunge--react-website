@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { ArrowLeft, Users, Target, Lightbulb, Award, Leaf, TrendingUp, Heart, CheckCircle, FlaskConical, Wheat, Recycle, Search } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-import image2 from '../assets/images/2.jpg';
+import image2 from '../assets/images/4.jpg';
 
 const AboutPage = () => {
   const navigate = useNavigate();
@@ -185,7 +185,7 @@ const AboutPage = () => {
       </section>
 
       {/* Achievements Section */}
-      <section className="py-20">
+      {/* <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16 scroll-reveal opacity-0">
@@ -212,7 +212,7 @@ const AboutPage = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Research and Development Section */}
       <section className="py-20 bg-[#2c3e50] dark:bg-[#1a252f]">
@@ -297,13 +297,6 @@ const AboutPage = () => {
               </div>
             </div>
 
-            {/* Timeline indicator */}
-            <div className="text-center mt-16 scroll-reveal opacity-0">
-              <div className="inline-flex items-center gap-4 bg-gradient-to-r from-red-500 to-red-600 text-white px-8 py-4 rounded-full shadow-lg">
-                <Target className="w-6 h-6" />
-                <span className="text-lg font-semibold">Target Year: 2030</span>
-              </div>
-            </div>
           </div>
         </div>
       </section>

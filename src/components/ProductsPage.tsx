@@ -1,53 +1,51 @@
 import { ShoppingCart } from 'lucide-react';
 import { useCart } from '../context/CartContext';
 import type { Product } from '../types';
-import image1 from '../assets/images/1.jpg';
-import image2 from '../assets/images/2.jpg';
-import image3 from '../assets/images/3.jpg';
+import pp1 from '../assets/images/h2.JPG';
+import pp2 from '../assets/images/pp2.JPG';
+import pp3 from '../assets/images/pp3.JPG';
 
 const products: Product[] = [
   {
     id: 1,
-    name: "Organic Maize Seeds",
-    price: 25.99,
-    description: "High-yield, non-GMO maize seeds suitable for Zambian climate",
-    image: image1
+    name: "Agricultural Production",
+    description: "We specialize in producing high-quality horticultural crops, cash crops, and livestock. Our commitment to sustainable farming practices promotes environmental stewardship while ensuring economic prosperity for our community.",
+    image: pp1
+   
   },
   {
     id: 2,
-    name: "Premium Fertilizer",
-    price: 45.50,
-    description: "Balanced NPK fertilizer for all crop types",
-    image: image2
+    name: "Agricultural Consulting Services",
+    description: "Mujisunge Farms offers comprehensive agricultural support, including expert consultation on crop selection, soil management, pest and disease control, and other essential practices. We provide valuable information on agricultural trends, market opportunities..",
+    image: pp3
   },
   {
     id: 3,
-    name: "Irrigation Drip Kit",
-    price: 120.00,
-    description: "Complete drip irrigation system for 0.5 acre farm",
-    image: image3
+    name: "Climate Change Education",
+    description: "We raise awareness about the impacts of climate change on agriculture and offer practical solutions to mitigate its challenges. Our educational programs empower farmers with knowledge and tools for climate-resilient farming.",
+    image: pp2
   },
-  {
-    id: 4,
-    name: "Organic Pesticides",
-    price: 35.75,
-    description: "Eco-friendly pest control solution for vegetables",
-    image: image1
-  },
-  {
-    id: 5,
-    name: "Farm Tools Set",
-    price: 85.00,
-    description: "Complete set of essential farming tools",
-    image: image2
-  },
-  {
-    id: 6,
-    name: "Greenhouse Kit",
-    price: 350.00,
-    description: "DIY greenhouse kit for small-scale farming",
-    image: image3
-  }
+  // {
+  //   id: 4,
+  //   name: "Organic Pesticides",
+  //   price: 35.75,
+  //   description: "Eco-friendly pest control solution for vegetables",
+  //   image: pp1
+  // },
+  // {
+  //   id: 5,
+  //   name: "Farm Tools Set",
+  //   price: 85.00,
+  //   description: "Complete set of essential farming tools",
+  //   image: image2
+  // },
+  // {
+  //   id: 6,
+  //   name: "Greenhouse Kit",
+  //   price: 350.00,
+  //   description: "DIY greenhouse kit for small-scale farming",
+  //   image: image3
+  // }
 ];
 
 const ProductsPage = () => {
@@ -97,15 +95,12 @@ const ProductsPage = () => {
                 <p className="text-gray-600 dark:text-gray-400 text-sm mb-3 line-clamp-2">
                   {product.description}
                 </p>
-                <div className="text-xl sm:text-2xl font-bold text-[#2e8b57] mb-4">
-                  K{product.price.toFixed(2)}
-                </div>
                 <button
                   onClick={() => handleAddToCart(product)}
                   className="w-full flex items-center justify-center gap-2 bg-[#2e8b57] text-white py-2 px-4 rounded font-semibold hover:bg-[#1e5d3b] transition-colors duration-200"
                 >
                   <ShoppingCart size={18} />
-                  Add to Cart
+                  Add to Inquiry
                 </button>
               </div>
             </div>

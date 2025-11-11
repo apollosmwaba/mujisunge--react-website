@@ -1,8 +1,8 @@
 import { useNavigate } from 'react-router-dom';
 import { ArrowRight, Camera } from 'lucide-react';
-import image1 from '../assets/images/1.jpg';
-import image2 from '../assets/images/2.jpg';
-import image3 from '../assets/images/3.jpg';
+import image1 from '../assets/images/FG3.JPG';
+import image2 from '../assets/images/pp2.JPG';
+import image3 from '../assets/images/h2.JPG';
 
 const GalleryPreview = () => {
   const navigate = useNavigate();
@@ -17,14 +17,16 @@ const GalleryPreview = () => {
     {
       id: 2,
       src: image2,
-      alt: "Young Plant Growth",
-      title: "Fresh Growth"
+      alt: "Farm Infrastructure",
+      title: "Modern Facilities"
+     
     },
     {
       id: 3,
       src: image3,
-      alt: "Farm Infrastructure",
-      title: "Modern Facilities"
+      alt: "Livestock images",
+      title: "livestock"
+    
     }
   ];
 

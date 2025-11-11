@@ -1,6 +1,6 @@
 import { ArrowRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-import image2 from '../assets/images/2.jpg';
+import PI2 from '../assets/images/P1.JPG';
 
 const Products = () => {
   const navigate = useNavigate();
@@ -17,8 +17,8 @@ const Products = () => {
           <div className="space-y-6">
             <div className="space-y-4">
               <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-                At Mujisunge Farms, we believe that sustainable agriculture is essential for ensuring food security, 
-                protecting the environment, and improving the livelihoods of rural communities. 
+                At Mujisunge Farms, we offer a range of agricultural services to support small-scale farmers and promote sustainable agriculture
+       . 
                 We are dedicated to working to create a more sustainable and resilient agricultural sector.
               </p>
               
@@ -68,7 +68,7 @@ const Products = () => {
           <div className="relative">
             <div className="relative overflow-hidden rounded-2xl shadow-2xl transform rotate-2 hover:rotate-0 transition-transform duration-500">
               <img
-                src={image2}
+                src={PI2}
                 alt="Agricultural Products"
                 className="w-full h-80 lg:h-96 object-cover"
               />
