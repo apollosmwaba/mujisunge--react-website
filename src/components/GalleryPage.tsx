@@ -3,7 +3,7 @@ import { ArrowLeft, X, ChevronLeft, ChevronRight, ZoomIn } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import image1 from '../assets/images/fg2.JPG';
 import image2 from '../assets/images/fg4.JPG';
-import image3 from '../assets/images/3.JPG';
+import image3 from '../assets/images/P1.JPG';
 import image4 from '../assets/images/4.jpg';
 import image5 from '../assets/images/FG3.JPG';
 import image6 from '../assets/images/h3.JPG';
