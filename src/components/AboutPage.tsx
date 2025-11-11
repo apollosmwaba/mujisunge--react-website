@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { ArrowLeft, Users, Target, Lightbulb, Award, Leaf, TrendingUp, Heart, CheckCircle, FlaskConical, Wheat, Recycle, Search } from 'lucide-react';
+import { ArrowLeft, Users, Target, Lightbulb, Award, Leaf, TrendingUp, Heart, FlaskConical, Wheat, Recycle, Search } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import image2 from '../assets/images/4.jpg';
 
@@ -65,14 +65,6 @@ const AboutPage = () => {
     }
   ];
 
-  const achievements = [
-    'Certified Organic Farming Practices',
-    'Award-winning Sustainable Agriculture Program',
-    'Partnership with 50+ Local Communities',
-    'Zero-waste Production Initiative',
-    'Climate-smart Agriculture Implementation',
-    'Youth Farmer Training Programs'
-  ];
 
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">

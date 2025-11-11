@@ -7,7 +7,7 @@ interface CartProps {
 }
 
 const Cart = ({ isOpen, onClose }: CartProps) => {
-  const { cart, updateQuantity, removeFromCart, cartTotal } = useCart();
+  const { cart, updateQuantity, removeFromCart } = useCart();
 
   const handleCheckout = () => {
     if (cart.length === 0) {
